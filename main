@@ -6,14 +6,12 @@
 
 using namespace std;
 
-// Structure to hold contact information
+
 struct Contact {
     string name;
     string phoneNumber;
     string email;
 };
-
-// Function prototypes
 void displayMenu();
 void addContact(vector<Contact>& contacts);
 void viewContacts(const vector<Contact>& contacts);
@@ -25,14 +23,14 @@ void loadContactsFromFile(vector<Contact>& contacts);
 int main() {
     vector<Contact> contacts;
 
-    // Load contacts from file (if any)
+    
     loadContactsFromFile(contacts);
 
     char choice;
     do {
         displayMenu();
         cin >> choice;
-        cin.ignore(); // to consume the newline character left by cin
+        cin.ignore(); 
 
         switch (choice) {
             case '1':
